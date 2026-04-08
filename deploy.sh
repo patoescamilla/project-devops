@@ -1,9 +1,11 @@
 #!/bin/bash
 
+source config/config.env
+
 ACTION=$1
-INSTANCE=$2
-DIR=$3
-BUCKET=$4
+INSTANCE=${2:-$INSTANCE_ID}
+DIR=${3:-$DIRECTORY}
+BUCKET=${4:-$BUCKET_NAME}
 
 echo "Deploy iniciado" >> logs/deploy.log
 
